@@ -5,7 +5,7 @@
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
 		<RootNamespace>Bieber.DDD.Core</RootNamespace>
-		<Authors>bieber</Authors>
+		<Authors>Bieber</Authors>
 		<Description>Enthält grundlegende Interfaces, abstrakte Klassen und Utilities für Domain-Driven-Design.</Description>
 		<PackageTags>DDD;ResultObject;ResultPattern</PackageTags>
 		<Version>0.0.1</Version>
