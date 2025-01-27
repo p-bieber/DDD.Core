@@ -8,7 +8,7 @@
 		<RootNamespace>$(Authors).$(AssemblyName)</RootNamespace>
 		<Description>Enthält grundlegende Interfaces, abstrakte Klassen und Utilities für Domain-Driven-Design.</Description>
 		<PackageTags>DDD;ResultObject;ResultPattern</PackageTags>
-		<Version>0.0.2</Version>
+		<Version>0.0.3</Version>
 		<RepositoryUrl>https://github.com/p-bieber/DDD.Core</RepositoryUrl>
 		<PackageId>$(Authors).$(AssemblyName)</PackageId>
 		<RepositoryType>git</RepositoryType>
