@@ -1,4 +1,4 @@
-﻿namespace DDD.Core.Domain;
+﻿namespace Bieber.DDD.Core.Domain;
 public abstract class AggregateRoot(Guid id) : Entity(id)
 {
     private readonly List<IDomainEvent> _domainEvents = [];

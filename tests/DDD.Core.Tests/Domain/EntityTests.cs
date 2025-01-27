@@ -1,4 +1,4 @@
-﻿using DDD.Core.Domain;
+﻿using Bieber.DDD.Core.Domain;
 
 namespace DDD.Core.Tests.Domain;
 

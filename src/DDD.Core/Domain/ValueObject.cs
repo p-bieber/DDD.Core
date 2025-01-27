@@ -1,4 +1,4 @@
-﻿namespace DDD.Core.Domain;
+﻿namespace Bieber.DDD.Core.Domain;
 public abstract class ValueObject : IEquatable<ValueObject>
 {
     public abstract IEnumerable<object> GetAtomicValues();

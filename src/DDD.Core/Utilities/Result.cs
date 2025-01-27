@@ -1,6 +1,6 @@
 ﻿using System.Diagnostics.CodeAnalysis;
 
-namespace DDD.Core.Utilities;
+namespace Bieber.DDD.Core.Utilities;
 
 public class Result<TValue> : Result
 {

@@ -1,4 +1,4 @@
-﻿using DDD.Core.Utilities;
+﻿using Bieber.DDD.Core.Utilities;
 
 namespace DDD.Core.Tests.Utilities;
 

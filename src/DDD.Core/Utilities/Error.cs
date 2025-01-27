@@ -1,4 +1,4 @@
-﻿namespace DDD.Core.Utilities;
+﻿namespace Bieber.DDD.Core.Utilities;
 
 public enum ErrorType
 {

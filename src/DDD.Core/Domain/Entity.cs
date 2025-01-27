@@ -1,4 +1,4 @@
-﻿namespace DDD.Core.Domain;
+﻿namespace Bieber.DDD.Core.Domain;
 
 [System.Diagnostics.CodeAnalysis.SuppressMessage("Style", "IDE0046:In bedingten Ausdruck konvertieren", Justification = "<Ausstehend>")]
 public abstract class Entity(Guid id) : IEquatable<Entity>
