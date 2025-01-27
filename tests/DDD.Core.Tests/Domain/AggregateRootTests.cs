@@ -8,7 +8,7 @@ public class AggregateRootTests
     public void Raise_DomainEvent_IsAddedToDomainEvents()
     {
         var aggregate = new DerivedAggregateRoot(Guid.NewGuid());
-        var domainEvent = new TestDomainEvent();
+        var domainEvent = new TestDomainEvent(aggregate.Id);
 
         aggregate.Raise(domainEvent);
 
@@ -19,7 +19,7 @@ public class AggregateRootTests
     public void ClearDomainEvents_DomainEventsAreCleared()
     {
         var aggregate = new DerivedAggregateRoot(Guid.NewGuid());
-        var domainEvent = new TestDomainEvent();
+        var domainEvent = new TestDomainEvent(aggregate.Id);
 
         aggregate.Raise(domainEvent);
         aggregate.ClearDomainEvents();
@@ -31,7 +31,7 @@ public class AggregateRootTests
     public void ApplyEvents_EventsAreApplied()
     {
         var aggregate = new DerivedAggregateRoot(Guid.NewGuid());
-        var domainEvent = new TestDomainEvent();
+        var domainEvent = new TestDomainEvent(aggregate.Id);
         var events = new List<IDomainEvent> { domainEvent };
 
         aggregate.ApplyEvents(events);
@@ -39,11 +39,9 @@ public class AggregateRootTests
         Assert.True(aggregate.EventApplied);
     }
 
-    private class DerivedAggregateRoot : AggregateRoot
+    private class DerivedAggregateRoot(Guid id) : AggregateRoot(id)
     {
         public bool EventApplied { get; private set; }
-
-        public DerivedAggregateRoot(Guid id) : base(id) { }
 
         public override void ApplyEvent(IDomainEvent @event)
         {
@@ -51,5 +49,8 @@ public class AggregateRootTests
         }
     }
 
-    private class TestDomainEvent : IDomainEvent { }
+    private class TestDomainEvent(Guid aggregateId) : IDomainEvent
+    {
+        public Guid AggregateId => aggregateId;
+    }
 }
